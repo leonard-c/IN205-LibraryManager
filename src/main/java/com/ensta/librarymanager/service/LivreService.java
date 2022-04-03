@@ -66,7 +66,7 @@ public class LivreService implements ILivreService{
 	public int create(Livre livre) throws ServiceException {
 		try {
 			if (livre.getTitre() != null)
-				return this.livreDao.create(livre);			// Question à propos de l'id ici ???
+				return this.livreDao.create(livre);
 			else
 				throw new ServiceException();
 		} catch (DaoException e) {

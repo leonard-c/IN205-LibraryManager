@@ -60,9 +60,7 @@ public class EmpruntDao implements IEmpruntDao {
 				java.sql.Date dateRetourSQL = rs.getDate("dateRetour");
 				LocalDate dateRetour = (dateRetourSQL==null)? null : dateRetourSQL.toLocalDate();
 
-				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement); // Attention :
-																											// possibles
-																											// doublons
+				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement);
 				Livre livre = new Livre(idLivre, titre, auteur, ISBN);
 				Emprunt emprunt = new Emprunt(id, membre, livre, dateEmprunt, dateRetour);
 				emprunts.add(emprunt);
@@ -105,9 +103,7 @@ public class EmpruntDao implements IEmpruntDao {
 				LocalDate dateEmprunt = rs.getDate("dateEmprunt").toLocalDate();
 				LocalDate dateRetour = null;
 
-				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement); // Attention :
-																											// possibles
-																											// doublons
+				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement);
 				Livre livre = new Livre(idLivre, titre, auteur, ISBN);
 				Emprunt emprunt = new Emprunt(id, membre, livre, dateEmprunt, dateRetour);
 				emprunts.add(emprunt);
@@ -197,9 +193,7 @@ public class EmpruntDao implements IEmpruntDao {
 				LocalDate dateEmprunt = rs.getDate("dateEmprunt").toLocalDate();
 				LocalDate dateRetour = null;
 
-				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement); // Attention :
-																											// possibles
-																											// doublons
+				Membre membre = new Membre(idMembre, nom, prenom, adresse, email, telephone, abonnement);
 				Emprunt emprunt = new Emprunt(id, membre, livre, dateEmprunt, dateRetour);
 				emprunts.add(emprunt);
 			}
